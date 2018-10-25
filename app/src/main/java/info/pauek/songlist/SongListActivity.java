@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +35,23 @@ public class SongListActivity extends AppCompatActivity {
         song_list_view = findViewById(R.id.song_list_view);
         song_list_view.setLayoutManager(new LinearLayoutManager(this));
         song_list_view.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.newSong )
+        {
+            Toast.makeText(this, "Clikaste!", Toast.LENGTH_SHORT).show();
+        }
+
+        return true;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

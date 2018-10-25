@@ -1,5 +1,6 @@
 package info.pauek.songlist;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +50,9 @@ public class SongListActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.newSong )
         {
             Toast.makeText(this, "Clikaste!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, SongEditActivity.class);
+            startActivityForResult(intent,0);
+
         }
 
         return true;

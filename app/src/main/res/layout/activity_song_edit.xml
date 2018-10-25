@@ -20,15 +20,16 @@
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="0dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_title" />
 
@@ -46,7 +47,7 @@
     <EditText
         android:id="@+id/editTextBand"
         android:layout_width="0dp"
-        android:layout_height="29dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -72,7 +73,7 @@
     <EditText
         android:id="@+id/editTextYear"
         android:layout_width="0dp"
-        android:layout_height="31dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="31dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="31dp"
@@ -90,9 +91,9 @@
         android:layout_height="39dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:text="-"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextYear"
-        app:layout_constraintEnd_toStartOf="@+id/edit_sum_button"
-        tools:text="-" />
+        app:layout_constraintEnd_toStartOf="@+id/edit_sum_button" />
 
     <Button
         android:id="@+id/edit_sum_button"
@@ -100,16 +101,22 @@
         android:layout_height="38dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:text="+"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextYear"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="+" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/edit_save_button"
-        android:layout_width="266dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="447dp"
-        tools:text="Save" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
